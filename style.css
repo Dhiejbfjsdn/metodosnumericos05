@@ -1,0 +1,94 @@
+ :root {
+            --bg-light: #f9f6f7;
+            --primary-pastel: #a9cbd1;
+            --secondary-pastel: #f5cfc7;
+            --accent-pastel: #ffe1d6;
+            --text-dark: #3a3a3a;
+            --hover-shadow: rgba(0,0,0,0.1);
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 50px;
+        }
+        .navbar {
+            background-color: var(--primary-pastel);
+        }
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .nav-link.active {
+            background-color: var(--secondary-pastel);
+            border-radius: 0.5rem;
+            color: #222;
+        }
+        .nav-link:hover:not(.active) {
+            background-color: var(--accent-pastel);
+            border-radius: 0.5rem;
+            color: #444;
+        }
+        .content-section {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px var(--hover-shadow);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #476a6f;
+        }
+        p.definition {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .method-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .method-image-container {
+            max-width: 320px;
+            text-align: center;
+            user-select: none;
+        }
+        .method-image-container img {
+            max-width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px var(--hover-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .method-image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px var(--hover-shadow);
+        }
+        .image-caption {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #777;
+            font-size: 0.85rem;
+            padding: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .method-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            .method-image-container {
+                max-width: 90vw;
+            }
+        }

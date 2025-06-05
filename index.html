@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Métodos Numéricos Interactivos</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3 text-dark" href="#">Métodos Numéricos</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav nav-pills" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="biseccion-tab" data-bs-toggle="pill" data-bs-target="#biseccion" type="button" role="tab" aria-controls="biseccion" aria-selected="true">Bisección</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="newton-tab" data-bs-toggle="pill" data-bs-target="#newton" type="button" role="tab" aria-controls="newton" aria-selected="false">Newton-Raphson</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="secante-tab" data-bs-toggle="pill" data-bs-target="#secante" type="button" role="tab" aria-controls="secante" aria-selected="false">Secante</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="puntofijo-tab" data-bs-toggle="pill" data-bs-target="#puntofijo" type="button" role="tab" aria-controls="puntofijo" aria-selected="false">Punto Fijo</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="gauss-tab" data-bs-toggle="pill" data-bs-target="#gauss" type="button" role="tab" aria-controls="gauss" aria-selected="false">Gauss</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="gaussjordan-tab" data-bs-toggle="pill" data-bs-target="#gaussjordan" type="button" role="tab" aria-controls="gaussjordan" aria-selected="false">Gauss-Jordan</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-section">
+        <div class="tab-content" id="methodsContent">
+            <!-- Biseccion -->
+            <div class="tab-pane fade show active" id="biseccion" role="tabpanel" aria-labelledby="biseccion-tab" tabindex="0">
+                <h2>Método de Bisección</h2>
+                <p class="definition">
+                    El método de bisección es una técnica numérica para encontrar raíces de funciones continuas dividiendo iterativamente un intervalo en dos subintervalos. Se basa en el teorema del valor intermedio.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src=biseccion1.jpg alt="Definición Método Bisección 1" />
+                        <div class="image-caption">Ilustración bisección 1</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src= biseccion2.jpg alt="Definición Método Bisección 2" />
+                        <div class="image-caption">Ilustración bisección 2</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=biseccion3.jpg alt="Definición Método Bisección 3" />
+                        <div class="image-caption">Ilustración bisección 3</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=biseccion4.jpg alt="Definición Método Bisección 4" />
+                        <div class="image-caption">Ilustración bisección 4</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=biseccion5.jpg alt="Definición Método Bisección 5" />
+                        <div class="image-caption">Ilustración bisección 5</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=biseccion6.jpg alt="Definición Método Bisección 6" />
+                        <div class="image-caption">Ilustración bisección 6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newton-Raphson -->
+            <div class="tab-pane fade" id="newton" role="tabpanel" aria-labelledby="newton-tab" tabindex="0">
+                <h2>Método de Newton-Raphson</h2>
+                <p class="definition">
+                    El método de Newton-Raphson es una técnica iterativa para aproximar raíces de funciones diferenciables utilizando la tangente en un punto cercano como aproximación lineal.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src=newton1.jpg alt="Definición Método Newton-Raphson 1" />
+                        <div class="image-caption">Ilustración Newton-Raphson 1</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=newton2.jpg alt="Definición Método Newton-Raphson 2" />
+                        <div class="image-caption">Ilustración Newton-Raphson 2</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=newton3.jpg alt="Definición Método Newton-Raphson 3" />
+                        <div class="image-caption">Ilustración Newton-Raphson 3</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=newton4.jpg alt="Definición Método Newton-Raphson 4" />
+                        <div class="image-caption">Ilustración Newton-Raphson 4</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=newton5.jpg alt="Definición Método Newton-Raphson 5" />
+                        <div class="image-caption">Ilustración Newton-Raphson 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secante -->
+            <div class="tab-pane fade" id="secante" role="tabpanel" aria-labelledby="secante-tab" tabindex="0">
+                <h2>Método de la Secante</h2>
+                <p class="definition">
+                    El método de la secante es un método iterativo que aproxima raíces usando líneas secantes entre dos puntos cercanos en lugar de derivadas, útil cuando la derivada es difícil de calcular.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src=secante1.jpg alt="Definición Método Secante 1" />
+                        <div class="image-caption">Ilustración secante 1</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=secante2.jpg alt="Definición Método Secante 2" />
+                        <div class="image-caption">Ilustración secante 2</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=secante3.jpg alt="Definición Método Secante 3" />
+                        <div class="image-caption">Ilustración secante 3</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=secante4.jpg alt="Definición Método Secante 4" />
+                        <div class="image-caption">Ilustración secante 4</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=secante5.jpg alt="Definición Método Secante 5" />
+                        <div class="image-caption">Ilustración secante 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Punto Fijo -->
+            <div class="tab-pane fade" id="puntofijo" role="tabpanel" aria-labelledby="puntofijo-tab" tabindex="0">
+                <h2>Método de Punto Fijo</h2>
+                <p class="definition">
+                    El método de punto fijo es una técnica para encontrar soluciones a ecuaciones reescribiéndolas en forma \( x = g(x) \) y aplicando iteraciones sucesivas hasta converger a un punto fijo.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src=punto1.jpg alt="Definición Método Punto Fijo 1" />
+                        <div class="image-caption">Ilustración punto fijo 1</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src=punto2.jpg alt="Definición Método Punto Fijo 2" />
+                        <div class="image-caption">Ilustración punto fijo 2</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src= punto3.jpg alt="Definición Método Punto Fijo 3" />
+                        <div class="image-caption">Ilustración punto fijo 3</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src= punto4.jpg alt="Definición Método Punto Fijo 4" />
+                        <div class="image-caption">Ilustración punto fijo 4</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src= punto5.jpg alt="Definición Método Punto Fijo 5" />
+                        <div class="image-caption">Ilustración punto fijo 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gauss -->
+            <div class="tab-pane fade" id="gauss" role="tabpanel" aria-labelledby="gauss-tab" tabindex="0">
+                <h2>Método de Gauss</h2>
+                <p class="definition">
+                    El método de eliminación de Gauss es un procedimiento para resolver sistemas de ecuaciones lineales transformando la matriz del sistema a una forma triangular mediante operaciones elementales.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src=   alt="Definición Método Gauss" />
+                        <div class="image-caption">Eliminación gaussiana - reducción a matriz triangular</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src= alt="Sistema resuelto por método Gauss" />
+                        <div class="image-caption">Ejemplo de solución con Gauss</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gauss-Jordan -->
+            <div class="tab-pane fade" id="gaussjordan" role="tabpanel" aria-labelledby="gaussjordan-tab" tabindex="0">
+                <h2>Método de Gauss-Jordan</h2>
+                <p class="definition">
+                    El método de Gauss-Jordan extiende la eliminación de Gauss para convertir la matriz aumentada a la forma reducida por filas, permitiendo encontrar la solución directamente sin sustitución hacia atrás.
+                </p>
+                <div class="method-images">
+                    <div class="method-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Gauss-Jordan_elimination.svg/320px-Gauss-Jordan_elimination.svg.png" alt="Definición Método Gauss-Jordan" />
+                        <div class="image-caption">Reducción por filas en Gauss-Jordan</div>
+                    </div>
+                    <div class="method-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Gauss-Jordan_method_example.svg/320px-Gauss-Jordan_method_example.svg.png" alt="Ejemplo método Gauss-Jordan" />
+                        <div class="image-caption">Ejemplo de solución con Gauss-Jordan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Métodos Numéricos - Página educativa interactiva
+    </footer>
+
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
