@@ -299,7 +299,7 @@ h2 {
                 <button class="nav-link" id="tercer-parcial-tab" type="button" role="tab" aria-controls="tercer-parcial" aria-selected="false">Tercer Parcial</button>
             </li>
         </ul>
-
+        
         <!-- Contenido Parciales -->
         <div id="primer-parcial" class="partial-content active mt-4">
             <!-- Aquí van las pestañas de métodos para Primer Parcial -->
@@ -497,8 +497,190 @@ h2 {
 
         <div id="segundo-parcial" class="partial-content mt-4">
             <h2>Segundo Parcial</h2>
-            <p class="text-center text-muted">Contenido del segundo parcial aún no disponible.</p>
+
+    <!-- Pestañas de métodos para Segundo Parcial -->
+    <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab2" role="tablist" style="cursor: pointer;">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="jacobi2-tab" data-bs-toggle="pill" data-bs-target="#jacobi2" type="button" role="tab" aria-controls="jacobi2" aria-selected="true">Jacobi y Gauss-Seidel</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="montante2-tab" data-bs-toggle="pill" data-bs-target="#montante2" type="button" role="tab" aria-controls="montante2" aria-selected="false">Montante</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="interpolacion2-tab" data-bs-toggle="pill" data-bs-target="#interpolacion2" type="button" role="tab" aria-controls="interpolacion2" aria-selected="false">Interpolación y Lagrange</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="regresionSimple2-tab" data-bs-toggle="pill" data-bs-target="#regresionSimple2" type="button" role="tab" aria-controls="regresionSimple2" aria-selected="false">Regresión lineal simple</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="regresionMultiple2-tab" data-bs-toggle="pill" data-bs-target="#regresionMultiple2" type="button" role="tab" aria-controls="regresionMultiple2" aria-selected="false">Regresión lineal múltiple</button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="methodsContent2">
+        <!-- Jacobi y Gauss-Seidel -->
+        <div class="tab-pane fade show active" id="jacobi2" role="tabpanel" aria-labelledby="jacobi2-tab" tabindex="0">
+            <h2>Jacobi y Gauss-Seidel</h2>
+            <p class="definition">
+                Métodos iterativos para resolver sistemas de ecuaciones lineales, usando aproximaciones sucesivas.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="jacobi1.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi2.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi3.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi4.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi5.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi6.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi7.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi8.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi9.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="jacobi10.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
         </div>
+        <!-- Montante -->
+        <div class="tab-pane fade" id="montante2" role="tabpanel" aria-labelledby="montante2-tab" tabindex="0">
+            <h2>Método de Montante</h2>
+            <p class="definition">
+                El método de Montante es una técnica para resolver sistemas de ecuaciones lineales utilizando determinantes y operaciones matriciales, evitando el redondeo hasta el final.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="mon1.jpg" alt="Definición Montante" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="mon2.jpg" alt="Definición Montante" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="mon3.jpg" alt="Definición Montante" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="mon4.jpg" alt="Definición Montante" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="mon5.jpg" alt="Definición Montante" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Interpolación y Lagrange -->
+        <div class="tab-pane fade" id="interpolacion2" role="tabpanel" aria-labelledby="interpolacion2-tab" tabindex="0">
+            <h2>Interpolación y Lagrange</h2>
+            <p class="definition">
+                Métodos para encontrar polinomios que pasan por un conjunto de puntos dados.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="int2.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="int3.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="int4.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Regresión lineal simple -->
+        <div class="tab-pane fade" id="regresionSimple2" role="tabpanel" aria-labelledby="regresionSimple2-tab" tabindex="0">
+            <h2>Regresión lineal simple</h2>
+            <p class="definition">
+                Técnica estadística para ajustar una línea recta a un conjunto de datos.
+            </p>
+           <div class="method-images">
+                <div class="method-image-container">
+                    <img src="lin1.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lin2.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lin3.jpg" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lin4.png" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lin5.png" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Regresión lineal múltiple -->
+        <div class="tab-pane fade" id="regresionMultiple2" role="tabpanel" aria-labelledby="regresionMultiple2-tab" tabindex="0">
+            <h2>Regresión lineal múltiple</h2>
+            <p class="definition">
+                Extensión de la regresión lineal simple para más de una variable independiente.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="lint1.png" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lint2.png" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="lint3.png" alt="Definición Interpolación y Lagrange" />
+                    <div class="image-caption"></div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
 
         <div id="tercer-parcial" class="partial-content mt-4">
             <h2>Tercer Parcial</h2>
