@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,14 +8,16 @@
     <!-- Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-         :root {
+        :root {
             --primary-color: #3498db;
             --secondary-color: #2c3e50;
             --accent-color: #e74c3c;
@@ -22,7 +25,7 @@
             --dark-text: #2c3e50;
             --light-text: #7f8c8d;
         }
-        
+
         body {
             padding-top: 80px;
             font-family: 'Roboto', sans-serif;
@@ -30,32 +33,35 @@
             background-color: #f5f7fa;
             line-height: 1.6;
         }
-        
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Roboto Slab', serif;
             font-weight: 600;
             color: var(--secondary-color);
         }
 
-h2 {
+        h2 {
             margin-top: 1.5rem;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--primary-color);
         }
-        
+
         /* Navbar styles */
         .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             background-color: white !important;
         }
-        
+
         .navbar-brand {
             color: var(--secondary-color) !important;
             font-weight: 700;
             font-size: 1.5rem;
         }
-        
+
         /* Portada styles */
         .cover {
             display: flex;
@@ -66,34 +72,45 @@ h2 {
             background-color: var(--light-bg);
             text-align: center;
         }
+
         .cover h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
         .cover p {
             font-size: 1.2rem;
             margin: 0.5rem 0;
         }
+
         /* Container styles for parciales */
         .partial-content {
             display: none;
             animation: fadeIn 0.5s ease;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .partial-content.active {
             display: block;
         }
-        
+
         /* Tab styles */
         .nav-tabs {
             border-bottom: 2px solid #dee2e6;
             margin-bottom: 1.5rem;
         }
+
         .nav-tabs .nav-link {
             color: var(--light-text);
             font-weight: 500;
@@ -101,19 +118,19 @@ h2 {
             padding: 0.75rem 1.5rem;
             transition: all 0.3s ease;
         }
-        
+
         .nav-tabs .nav-link:hover {
             color: var(--primary-color);
             background-color: rgba(52, 152, 219, 0.1);
         }
-        
+
         .nav-tabs .nav-link.active {
             color: var(--primary-color);
             background-color: transparent;
             border-bottom: 3px solid var(--primary-color);
             font-weight: 600;
         }
-        
+
         .nav-pills .nav-link {
             color: var(--light-text);
             margin: 0.25rem;
@@ -121,28 +138,28 @@ h2 {
             border-radius: 50px;
             transition: all 0.3s ease;
         }
-        
+
         .nav-pills .nav-link:hover {
             background-color: rgba(52, 152, 219, 0.1);
         }
-        
+
         .nav-pills .nav-link.active {
             background-color: var(--primary-color);
             color: white;
             font-weight: 500;
         }
-        
+
         /* Definition styles */
         .definition {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 2rem;
             border-left: 4px solid var(--primary-color);
             font-size: 1.05rem;
         }
-        
+
         /* Styling for nested method tabs */
         .method-images {
             display: flex;
@@ -151,7 +168,7 @@ h2 {
             margin-top: 24px;
             justify-content: center;
         }
-        
+
         .method-image-container {
             flex: 1 1 280px;
             max-width: 280px;
@@ -160,23 +177,24 @@ h2 {
             align-items: center;
             transition: transform 0.3s ease;
         }
+
         .method-image-container:hover {
             transform: translateY(-5px);
         }
-        
+
         .method-image-container img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             object-fit: cover;
             transition: box-shadow 0.3s ease;
         }
-        
+
         .method-image-container:hover img {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .image-caption {
             margin-top: 12px;
             font-size: 0.9rem;
@@ -184,7 +202,7 @@ h2 {
             text-align: center;
             font-weight: 500;
         }
-        
+
         /* Footer styles */
         footer {
             margin-top: 60px;
@@ -193,50 +211,51 @@ h2 {
             text-align: center;
             color: white;
         }
-        
+
         footer a {
             color: white;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             color: var(--primary-color);
             text-decoration: underline;
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .nav-tabs .nav-link {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
-            
+
             .nav-pills {
                 justify-content: flex-start;
             }
-            
+
             .method-image-container {
                 flex: 1 1 100%;
                 max-width: 100%;
             }
         }
-         /* Empty content placeholder */
+
+        /* Empty content placeholder */
         .empty-content {
             text-align: center;
             padding: 3rem;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .empty-content i {
             font-size: 3rem;
             color: var(--light-text);
             margin-bottom: 1rem;
         }
-
-           </style>
+    </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
         <div class="container">
@@ -270,427 +289,637 @@ h2 {
             <p>Carrera: IME</p>
             <p>Coach: Sergio Castillo</p>
             <a href="#partialsTab">Continuar</a>
-             <div id="continuar" class="partial-content mt-4">
-            <h2>Segundo Parcial</h2>
-        </div>
+            <div id="continuar" class="partial-content mt-4">
+                <h2>Segundo Parcial</h2>
+            </div>
 
         </div>
 
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3" href="#">Métodos Numéricos</a>
-        </div>
-    </nav>
+        </style>
+        </head>
 
-    <div class="container">
-        <!-- Menu Parciales -->
-         <div id="botonContinuar"></div>
-        <ul class="nav nav-tabs justify-content-center" id="partialsTab" role="tablist" style="cursor: pointer;">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="primer-parcial-tab" type="button" role="tab" aria-controls="primer-parcial" aria-selected="true">Primer Parcial</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="segundo-parcial-tab" type="button" role="tab" aria-controls="segundo-parcial" aria-selected="false">Segundo Parcial</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tercer-parcial-tab" type="button" role="tab" aria-controls="tercer-parcial" aria-selected="false">Tercer Parcial</button>
-            </li>
-        </ul>
-        
-        <!-- Contenido Parciales -->
-        <div id="primer-parcial" class="partial-content active mt-4">
-            <!-- Aquí van las pestañas de métodos para Primer Parcial -->
-            <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab" role="tablist" style="cursor: pointer;">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="biseccion-tab" data-bs-toggle="pill" data-bs-target="#biseccion" type="button" role="tab" aria-controls="biseccion" aria-selected="true">Bisección</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="newton-tab" data-bs-toggle="pill" data-bs-target="#newton" type="button" role="tab" aria-controls="newton" aria-selected="false">Newton-Raphson</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="secante-tab" data-bs-toggle="pill" data-bs-target="#secante" type="button" role="tab" aria-controls="secante" aria-selected="false">Secante</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="puntofijo-tab" data-bs-toggle="pill" data-bs-target="#puntofijo" type="button" role="tab" aria-controls="puntofijo" aria-selected="false">Punto Fijo</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="gaussjordan-tab" data-bs-toggle="pill" data-bs-target="#gaussjordan" type="button" role="tab" aria-controls="gaussjordan" aria-selected="false">Gauss y Gauss-Jordan</button>
-                </li>
-            </ul>
+        <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-3" href="#">Métodos Numéricos</a>
+                </div>
+            </nav>
 
-            <div class="tab-content mt-3" id="methodsContent">
-                <!-- Biseccion -->
-                <div class="tab-pane fade show active" id="biseccion" role="tabpanel" aria-labelledby="biseccion-tab" tabindex="0">
-                    <h2>Método de Bisección</h2>
-                    <p class="definition">
-                        El método de bisección es una técnica numérica para encontrar raíces de funciones continuas dividiendo iterativamente un intervalo en dos subintervalos. Se basa en el teorema del valor intermedio.
-                    </p>
-                    <div class="method-images">
-                        <div class="method-image-container">
-                            <img src="biseccion1.jpg" alt="Definición Método Bisección 1" />
-                            <div class="image-caption"></div>
+            <div class="container">
+                <!-- Menu Parciales -->
+                <div id="botonContinuar"></div>
+                <ul class="nav nav-tabs justify-content-center" id="partialsTab" role="tablist"
+                    style="cursor: pointer;">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="primer-parcial-tab" type="button" role="tab"
+                            aria-controls="primer-parcial" aria-selected="true">Primer Parcial</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="segundo-parcial-tab" type="button" role="tab"
+                            aria-controls="segundo-parcial" aria-selected="false">Segundo Parcial</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tercer-parcial-tab" type="button" role="tab"
+                            aria-controls="tercer-parcial" aria-selected="false">Tercer Parcial</button>
+                    </li>
+                </ul>
+
+                <!-- Contenido Parciales -->
+                <div id="primer-parcial" class="partial-content active mt-4">
+                    <!-- Aquí van las pestañas de métodos para Primer Parcial -->
+                    <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab" role="tablist"
+                        style="cursor: pointer;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="biseccion-tab" data-bs-toggle="pill"
+                                data-bs-target="#biseccion" type="button" role="tab" aria-controls="biseccion"
+                                aria-selected="true">Bisección</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="newton-tab" data-bs-toggle="pill" data-bs-target="#newton"
+                                type="button" role="tab" aria-controls="newton"
+                                aria-selected="false">Newton-Raphson</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="secante-tab" data-bs-toggle="pill" data-bs-target="#secante"
+                                type="button" role="tab" aria-controls="secante" aria-selected="false">Secante</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="puntofijo-tab" data-bs-toggle="pill"
+                                data-bs-target="#puntofijo" type="button" role="tab" aria-controls="puntofijo"
+                                aria-selected="false">Punto Fijo</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="gaussjordan-tab" data-bs-toggle="pill"
+                                data-bs-target="#gaussjordan" type="button" role="tab" aria-controls="gaussjordan"
+                                aria-selected="false">Gauss y Gauss-Jordan</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-3" id="methodsContent">
+                        <!-- Biseccion -->
+                        <div class="tab-pane fade show active" id="biseccion" role="tabpanel"
+                            aria-labelledby="biseccion-tab" tabindex="0">
+                            <h2>Método de Bisección</h2>
+                            <p class="definition">
+                                El método de bisección es una técnica numérica para encontrar raíces de funciones
+                                continuas dividiendo iterativamente un intervalo en dos subintervalos. Se basa en el
+                                teorema del valor intermedio.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="biseccion1.jpg" alt="Definición Método Bisección 1" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion2.jpg" alt="Definición Método Bisección 2" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion3.jpg" alt="Definición Método Bisección 3" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion4.jpg" alt="Definición Método Bisección 4" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion5.jpg" alt="Definición Método Bisección 5" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion6.jpg" alt="Definición Método Bisección 6" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="biseccion7.png" alt="Definición Método Bisección 6" />
+                                    <div class="image-caption">EXCEL</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="biseccion2.jpg" alt="Definición Método Bisección 2" />
-                            <div class="image-caption"></div>
+
+                        <!-- Newton-Raphson -->
+                        <div class="tab-pane fade" id="newton" role="tabpanel" aria-labelledby="newton-tab"
+                            tabindex="0">
+                            <h2>Método de Newton-Raphson</h2>
+                            <p class="definition">
+                                El método de Newton-Raphson es una técnica iterativa para aproximar raíces de funciones
+                                diferenciables utilizando la tangente en un punto cercano como aproximación lineal.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="newton1.jpg" alt="Definición Método Newton-Raphson 1" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="newton2.jpg" alt="Definición Método Newton-Raphson 2" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="newton3.jpg" alt="Definición Método Newton-Raphson 3" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="newton4.jpg" alt="Definición Método Newton-Raphson 4" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="newton5.jpg" alt="Definición Método Newton-Raphson 5" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="newton6.png" alt="Definición Método Newton-Raphson 5" />
+                                    <div class="image-caption">EXCEL</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="biseccion3.jpg" alt="Definición Método Bisección 3" />
-                            <div class="image-caption"></div>
+
+                        <!-- Secante -->
+                        <div class="tab-pane fade" id="secante" role="tabpanel" aria-labelledby="secante-tab"
+                            tabindex="0">
+                            <h2>Método de la Secante</h2>
+                            <p class="definition">
+                                El método de la secante es un método iterativo que aproxima raíces usando líneas
+                                secantes entre dos puntos cercanos en lugar de derivadas, útil cuando la derivada es
+                                difícil de calcular.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="secante1.jpg" alt="Definición Método Secante 1" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="secante2.jpg" alt="Definición Método Secante 2" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="secante3.jpg" alt="Definición Método Secante 3" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="secante4.jpg" alt="Definición Método Secante 4" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="secante5.jpg" alt="Definición Método Secante 5" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="secante6.png" alt="Definición Método Secante 5" />
+                                    <div class="image-caption">EXCEL</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="biseccion4.jpg" alt="Definición Método Bisección 4" />
-                            <div class="image-caption"></div>
+
+                        <!-- Punto Fijo -->
+                        <div class="tab-pane fade" id="puntofijo" role="tabpanel" aria-labelledby="puntofijo-tab"
+                            tabindex="0">
+                            <h2>Método de Punto Fijo</h2>
+                            <p class="definition">
+                                El método de punto fijo es una técnica para encontrar soluciones a ecuaciones
+                                reescribiéndolas en forma \( x = g(x) \) y aplicando iteraciones sucesivas hasta
+                                converger a un punto fijo.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="punto1.jpg" alt="Definición Método Punto Fijo 1" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="punto2.jpg" alt="Definición Método Punto Fijo 2" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="punto3.jpg" alt="Definición Método Punto Fijo 3" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="punto4.jpg" alt="Definición Método Punto Fijo 4" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="punto5.jpg" alt="Definición Método Punto Fijo 5" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="punto6.png" alt="Definición Método Punto Fijo 5" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="biseccion5.jpg" alt="Definición Método Bisección 5" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="biseccion6.jpg" alt="Definición Método Bisección 6" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="biseccion7.png" alt="Definición Método Bisección 6" />
-                            <div class="image-caption">EXCEL</div>
+
+                        <!-- Gauss y Gauss-Jordan Unificados -->
+                        <div class="tab-pane fade" id="gaussjordan" role="tabpanel" aria-labelledby="gaussjordan-tab"
+                            tabindex="0">
+                            <h2>Método de Gauss y Gauss-Jordan</h2>
+                            <p class="definition">
+                                El método de eliminación de Gauss es un procedimiento para resolver sistemas de
+                                ecuaciones lineales transformando la matriz del sistema a una forma triangular mediante
+                                operaciones elementales.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="gaus1.jpg" alt="Definición Método Gauss" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="gaus2.jpg" alt="Sistema resuelto por método Gauss" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="gaus3.jpg" alt="Paso 3 del método de Gauss" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="gaus4.jpg" alt="Paso 4 del método de Gauss" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="gaus5.jpg" alt="Paso 5 del método de Gauss" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Newton-Raphson -->
-                <div class="tab-pane fade" id="newton" role="tabpanel" aria-labelledby="newton-tab" tabindex="0">
-                    <h2>Método de Newton-Raphson</h2>
-                    <p class="definition">
-                        El método de Newton-Raphson es una técnica iterativa para aproximar raíces de funciones diferenciables utilizando la tangente en un punto cercano como aproximación lineal.
-                    </p>
-                    <div class="method-images">
-                        <div class="method-image-container">
-                            <img src="newton1.jpg" alt="Definición Método Newton-Raphson 1" />
-                            <div class="image-caption"></div>
+                <div id="segundo-parcial" class="partial-content mt-4">
+                    <h2>Segundo Parcial</h2>
+
+                    <!-- Pestañas de métodos para Segundo Parcial -->
+                    <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab2" role="tablist"
+                        style="cursor: pointer;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="jacobi2-tab" data-bs-toggle="pill"
+                                data-bs-target="#jacobi2" type="button" role="tab" aria-controls="jacobi2"
+                                aria-selected="true">Jacobi y Gauss-Seidel</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="montante2-tab" data-bs-toggle="pill"
+                                data-bs-target="#montante2" type="button" role="tab" aria-controls="montante2"
+                                aria-selected="false">Montante</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="interpolacion2-tab" data-bs-toggle="pill"
+                                data-bs-target="#interpolacion2" type="button" role="tab" aria-controls="interpolacion2"
+                                aria-selected="false">Interpolación y Lagrange</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="regresionSimple2-tab" data-bs-toggle="pill"
+                                data-bs-target="#regresionSimple2" type="button" role="tab"
+                                aria-controls="regresionSimple2" aria-selected="false">Regresión lineal simple</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="regresionMultiple2-tab" data-bs-toggle="pill"
+                                data-bs-target="#regresionMultiple2" type="button" role="tab"
+                                aria-controls="regresionMultiple2" aria-selected="false">Regresión lineal
+                                múltiple</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-3" id="methodsContent2">
+                        <!-- Jacobi y Gauss-Seidel -->
+                        <div class="tab-pane fade show active" id="jacobi2" role="tabpanel"
+                            aria-labelledby="jacobi2-tab" tabindex="0">
+                            <h2>Jacobi y Gauss-Seidel</h2>
+                            <p class="definition">
+                                Métodos iterativos para resolver sistemas de ecuaciones lineales, usando aproximaciones
+                                sucesivas.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="jacobi1.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi2.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi3.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi4.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi5.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi6.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi7.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi8.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi9.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="jacobi10.jpg" alt="Jacobi y Gauss-Seidel" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="newton2.jpg" alt="Definición Método Newton-Raphson 2" />
-                            <div class="image-caption"></div>
+                        <!-- Montante -->
+                        <div class="tab-pane fade" id="montante2" role="tabpanel" aria-labelledby="montante2-tab"
+                            tabindex="0">
+                            <h2>Método de Montante</h2>
+                            <p class="definition">
+                                El método de Montante es una técnica para resolver sistemas de ecuaciones lineales
+                                utilizando determinantes y operaciones matriciales, evitando el redondeo hasta el final.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="mon1.jpg" alt="Definición Montante" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="mon2.jpg" alt="Definición Montante" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="mon3.jpg" alt="Definición Montante" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="mon4.jpg" alt="Definición Montante" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="mon5.jpg" alt="Definición Montante" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="newton3.jpg" alt="Definición Método Newton-Raphson 3" />
-                            <div class="image-caption"></div>
+                        <!-- Interpolación y Lagrange -->
+                        <div class="tab-pane fade" id="interpolacion2" role="tabpanel"
+                            aria-labelledby="interpolacion2-tab" tabindex="0">
+                            <h2>Interpolación y Lagrange</h2>
+                            <p class="definition">
+                                Métodos para encontrar polinomios que pasan por un conjunto de puntos dados.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="int2.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="int3.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="int4.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="method-image-container">
-                            <img src="newton4.jpg" alt="Definición Método Newton-Raphson 4" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="newton5.jpg" alt="Definición Método Newton-Raphson 5" />
-                            <div class="image-caption"></div>
-                        </div>
-                         <div class="method-image-container">
-                            <img src="newton6.png" alt="Definición Método Newton-Raphson 5" />
-                            <div class="image-caption">EXCEL</div>
+                        <!-- Regresión lineal simple -->
+                        <div class="tab-pane fade" id="regresionSimple2" role="tabpanel"
+                            aria-labelledby="regresionSimple2-tab" tabindex="0">
+                            <h2>Regresión lineal simple</h2>
+                            <p class="definition">
+                                Técnica estadística para ajustar una línea recta a un conjunto de datos.
+                            </p>
+                            <div class="method-images">
+                                <div class="method-image-container">
+                                    <img src="lin1.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="lin2.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="lin3.jpg" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="lin4.png" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                                <div class="method-image-container">
+                                    <img src="lin5.png" alt="Definición Interpolación y Lagrange" />
+                                    <div class="image-caption"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- Regresión lineal múltiple -->
+                    <div class="tab-pane fade" id="regresionMultiple2" role="tabpanel"
+                        aria-labelledby="regresionMultiple2-tab" tabindex="0">
+                        <h2>Regresión lineal múltiple</h2>
+                        <p class="definition">
+                            Extensión de la regresión lineal simple para más de una variable independiente.
+                        </p>
+                        <div class="method-images">
+                            <div class="method-image-container">
+                                <img src="lint1.png" alt="Definición Interpolación y Lagrange" />
+                                <div class="image-caption"></div>
+                            </div>
+                            <div class="method-image-container">
+                                <img src="lint2.png" alt="Definición Interpolación y Lagrange" />
+                                <div class="image-caption"></div>
+                            </div>
+                            <div class="method-image-container">
+                                <img src="lint3.png" alt="Definición Interpolación y Lagrange" />
+                                <div class="image-caption"></div>
+                            </div>
 
-                <!-- Secante -->
-                <div class="tab-pane fade" id="secante" role="tabpanel" aria-labelledby="secante-tab" tabindex="0">
-                    <h2>Método de la Secante</h2>
-                    <p class="definition">
-                        El método de la secante es un método iterativo que aproxima raíces usando líneas secantes entre dos puntos cercanos en lugar de derivadas, útil cuando la derivada es difícil de calcular.
-                    </p>
-                    <div class="method-images">
-                        <div class="method-image-container">
-                            <img src="secante1.jpg" alt="Definición Método Secante 1" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="secante2.jpg" alt="Definición Método Secante 2" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="secante3.jpg" alt="Definición Método Secante 3" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="secante4.jpg" alt="Definición Método Secante 4" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="secante5.jpg" alt="Definición Método Secante 5" />
-                            <div class="image-caption"></div>
-                        </div>
-                         <div class="method-image-container">
-                            <img src="secante6.png" alt="Definición Método Secante 5" />
-                            <div class="image-caption">EXCEL</div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Punto Fijo -->
-                <div class="tab-pane fade" id="puntofijo" role="tabpanel" aria-labelledby="puntofijo-tab" tabindex="0">
-                    <h2>Método de Punto Fijo</h2>
-                    <p class="definition">
-                        El método de punto fijo es una técnica para encontrar soluciones a ecuaciones reescribiéndolas en forma \( x = g(x) \) y aplicando iteraciones sucesivas hasta converger a un punto fijo.
-                    </p>
-                    <div class="method-images">
-                        <div class="method-image-container">
-                            <img src="punto1.jpg" alt="Definición Método Punto Fijo 1" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="punto2.jpg" alt="Definición Método Punto Fijo 2" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="punto3.jpg" alt="Definición Método Punto Fijo 3" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="punto4.jpg" alt="Definición Método Punto Fijo 4" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="punto5.jpg" alt="Definición Método Punto Fijo 5" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="punto6.png" alt="Definición Método Punto Fijo 5" />
-                            <div class="image-caption"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gauss y Gauss-Jordan Unificados -->
-                <div class="tab-pane fade" id="gaussjordan" role="tabpanel" aria-labelledby="gaussjordan-tab" tabindex="0">
-                    <h2>Método de Gauss y Gauss-Jordan</h2>
-                    <p class="definition">
-                        El método de eliminación de Gauss es un procedimiento para resolver sistemas de ecuaciones lineales transformando la matriz del sistema a una forma triangular mediante operaciones elementales.
-                    </p>
-                    <div class="method-images">
-                        <div class="method-image-container">
-                            <img src="gaus1.jpg" alt="Definición Método Gauss" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="gaus2.jpg" alt="Sistema resuelto por método Gauss" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="gaus3.jpg" alt="Paso 3 del método de Gauss" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="gaus4.jpg" alt="Paso 4 del método de Gauss" />
-                            <div class="image-caption"></div>
-                        </div>
-                        <div class="method-image-container">
-                            <img src="gaus5.jpg" alt="Paso 5 del método de Gauss" />
-                            <div class="image-caption"></div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
+    </div>
+    </div>
 
-        <div id="segundo-parcial" class="partial-content mt-4">
-            <h2>Segundo Parcial</h2>
+   <div id="tercer-parcial" class="partial-content mt-4">
+    <h2>Tercer Parcial</h2>
 
-    <!-- Pestañas de métodos para Segundo Parcial -->
-    <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab2" role="tablist" style="cursor: pointer;">
+    <!-- Pestañas de métodos para Tercer Parcial -->
+    <ul class="nav nav-pills flex-wrap justify-content-center" id="methodsTab3" role="tablist" style="cursor: pointer;">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="jacobi2-tab" data-bs-toggle="pill" data-bs-target="#jacobi2" type="button" role="tab" aria-controls="jacobi2" aria-selected="true">Jacobi y Gauss-Seidel</button>
+            <button class="nav-link active" id="difdiv3-tab" data-bs-toggle="pill" data-bs-target="#difdiv3"
+                type="button" role="tab" aria-controls="difdiv3" aria-selected="true">Diferencias Divididas</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="montante2-tab" data-bs-toggle="pill" data-bs-target="#montante2" type="button" role="tab" aria-controls="montante2" aria-selected="false">Montante</button>
+            <button class="nav-link" id="trapecio3-tab" data-bs-toggle="pill" data-bs-target="#trapecio3"
+                type="button" role="tab" aria-controls="trapecio3" aria-selected="false">Trapecio Simple y Compuesto</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="interpolacion2-tab" data-bs-toggle="pill" data-bs-target="#interpolacion2" type="button" role="tab" aria-controls="interpolacion2" aria-selected="false">Interpolación y Lagrange</button>
+            <button class="nav-link" id="simpson3-tab" data-bs-toggle="pill" data-bs-target="#simpson3"
+                type="button" role="tab" aria-controls="simpson3" aria-selected="false">Simpson</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="regresionSimple2-tab" data-bs-toggle="pill" data-bs-target="#regresionSimple2" type="button" role="tab" aria-controls="regresionSimple2" aria-selected="false">Regresión lineal simple</button>
+            <button class="nav-link" id="romberg3-tab" data-bs-toggle="pill" data-bs-target="#romberg3"
+                type="button" role="tab" aria-controls="romberg3" aria-selected="false">Romberg</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="regresionMultiple2-tab" data-bs-toggle="pill" data-bs-target="#regresionMultiple2" type="button" role="tab" aria-controls="regresionMultiple2" aria-selected="false">Regresión lineal múltiple</button>
+            <button class="nav-link" id="euler3-tab" data-bs-toggle="pill" data-bs-target="#euler3"
+                type="button" role="tab" aria-controls="euler3" aria-selected="false">Euler y Euler Modificado</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="runge3-tab" data-bs-toggle="pill" data-bs-target="#runge3"
+                type="button" role="tab" aria-controls="runge3" aria-selected="false">Runge-Kutta</button>
         </li>
     </ul>
 
-    <div class="tab-content mt-3" id="methodsContent2">
-        <!-- Jacobi y Gauss-Seidel -->
-        <div class="tab-pane fade show active" id="jacobi2" role="tabpanel" aria-labelledby="jacobi2-tab" tabindex="0">
-            <h2>Jacobi y Gauss-Seidel</h2>
+    <div class="tab-content mt-3" id="methodsContent3">
+        <!-- Diferencias Divididas -->
+        <div class="tab-pane fade show active" id="difdiv3" role="tabpanel" aria-labelledby="difdiv3-tab" tabindex="0">
+            <h2>Diferencias Divididas</h2>
             <p class="definition">
-                Métodos iterativos para resolver sistemas de ecuaciones lineales, usando aproximaciones sucesivas.
+             Se usa para interpolar datos o aproximar funciones, basado en dividir diferencias entre puntos para construir polinomios de Newton.
             </p>
             <div class="method-images">
                 <div class="method-image-container">
-                    <img src="jacobi1.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <img src="def1.jpg" alt="Diferencias Divididas" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="jacobi2.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <img src="def2.jpg" alt="Diferencias Divididas" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="jacobi3.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi4.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi5.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi6.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi7.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi8.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi9.jpg" alt="Jacobi y Gauss-Seidel" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="jacobi10.jpg" alt="Jacobi y Gauss-Seidel" />
+                    <img src="def3.png" alt="Diferencias Divididas" />
                     <div class="image-caption"></div>
                 </div>
             </div>
         </div>
-        <!-- Montante -->
-        <div class="tab-pane fade" id="montante2" role="tabpanel" aria-labelledby="montante2-tab" tabindex="0">
-            <h2>Método de Montante</h2>
+        <!-- Trapecio SIMPLE Y COMPUESTO -->
+        <div class="tab-pane fade" id="trapecio3" role="tabpanel" aria-labelledby="trapecio3-tab" tabindex="0">
+            <h2>Trapecio SIMPLE Y COMPUESTO</h2>
             <p class="definition">
-                El método de Montante es una técnica para resolver sistemas de ecuaciones lineales utilizando determinantes y operaciones matriciales, evitando el redondeo hasta el final.
+             Una técnica de integración numérica que aproxima el área bajo una curva dividiéndola en trapecios, sumando sus áreas.
             </p>
             <div class="method-images">
                 <div class="method-image-container">
-                    <img src="mon1.jpg" alt="Definición Montante" />
+                    <img src="TRA1.jpg" alt="Trapecio" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="mon2.jpg" alt="Definición Montante" />
+                    <img src="TRA2.jpg" alt="Trapecio" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="mon3.jpg" alt="Definición Montante" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="mon4.jpg" alt="Definición Montante" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="mon5.jpg" alt="Definición Montante" />
+                    <img src="TRA4.jpg" alt="Trapecio" />
                     <div class="image-caption"></div>
                 </div>
             </div>
         </div>
-        <!-- Interpolación y Lagrange -->
-        <div class="tab-pane fade" id="interpolacion2" role="tabpanel" aria-labelledby="interpolacion2-tab" tabindex="0">
-            <h2>Interpolación y Lagrange</h2>
+        <!-- Simpson -->
+        <div class="tab-pane fade" id="simpson3" role="tabpanel" aria-labelledby="simpson3-tab" tabindex="0">
+            <h2>Simpson</h2>
             <p class="definition">
-                Métodos para encontrar polinomios que pasan por un conjunto de puntos dados.
+                Un método de integración numérica que usa polinomios cuadráticos para aproximar el área bajo una curva, ofreciendo mayor precisión que el trapecio.
             </p>
             <div class="method-images">
                 <div class="method-image-container">
-                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                    <img src="sim1.jpg" alt="Simpson" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="int2.jpg" alt="Definición Interpolación y Lagrange" />
+                    <img src="sim2.jpg" alt="Simpson" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="int3.jpg" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="int4.jpg" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="int1.jpg" alt="Definición Interpolación y Lagrange" />
+                    <img src="sim3.jpg" alt="Simpson" />
                     <div class="image-caption"></div>
                 </div>
             </div>
         </div>
-        <!-- Regresión lineal simple -->
-        <div class="tab-pane fade" id="regresionSimple2" role="tabpanel" aria-labelledby="regresionSimple2-tab" tabindex="0">
-            <h2>Regresión lineal simple</h2>
+        <!-- Romberg -->
+        <div class="tab-pane fade" id="romberg3" role="tabpanel" aria-labelledby="romberg3-tab" tabindex="0">
+            <h2>Romberg</h2>
             <p class="definition">
-                Técnica estadística para ajustar una línea recta a un conjunto de datos.
-            </p>
-           <div class="method-images">
-                <div class="method-image-container">
-                    <img src="lin1.jpg" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="lin2.jpg" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="lin3.jpg" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="lin4.png" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-                <div class="method-image-container">
-                    <img src="lin5.png" alt="Definición Interpolación y Lagrange" />
-                    <div class="image-caption"></div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- Regresión lineal múltiple -->
-        <div class="tab-pane fade" id="regresionMultiple2" role="tabpanel" aria-labelledby="regresionMultiple2-tab" tabindex="0">
-            <h2>Regresión lineal múltiple</h2>
-            <p class="definition">
-                Extensión de la regresión lineal simple para más de una variable independiente.
+                Mejora la integración numérica (como el método del trapecio) usando extrapolación para aumentar la precisión al calcular áreas bajo curvas.
             </p>
             <div class="method-images">
                 <div class="method-image-container">
-                    <img src="lint1.png" alt="Definición Interpolación y Lagrange" />
+                    <img src="ron1.jpg" alt="Romberg" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="lint2.png" alt="Definición Interpolación y Lagrange" />
+                    <img src="ron2.jpg" alt="Romberg" />
                     <div class="image-caption"></div>
                 </div>
                 <div class="method-image-container">
-                    <img src="lint3.png" alt="Definición Interpolación y Lagrange" />
+                    <img src="ron3.jpg" alt="Romberg" />
                     <div class="image-caption"></div>
                 </div>
-                
+                <div class="method-image-container">
+                    <img src="ron4.jpg" alt="Romberg" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="ron5.jpg" alt="Romberg" />
+                    <div class="image-caption"></div>
+                </div>
             </div>
         </div>
+        <!-- Euler y Euler Modificado -->
+        <div class="tab-pane fade" id="euler3" role="tabpanel" aria-labelledby="euler3-tab" tabindex="0">
+            <h2>Euler y Euler Modificado</h2>
+            <p class="definition">
+                Una familia de métodos más precisos para EDO, que usa múltiples etapas por paso para mejorar la aproximación, siendo el de orden 4 el más común.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="eu1.jpg" alt="Euler" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="eu2.jpg" alt="Euler" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="eu3.jpg" alt="Euler" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-</div>
-
-        <div id="tercer-parcial" class="partial-content mt-4">
-            <h2>Tercer Parcial</h2>
-            <p class="text-center text-muted">Contenido del tercer parcial aún no disponible.</p>
+        <!-- Runge-Kutta -->
+        <div class="tab-pane fade" id="runge3" role="tabpanel" aria-labelledby="runge3-tab" tabindex="0">
+            <h2>Runge-Kutta</h2>
+            <p class="definition">
+                Una técnica simple para resolver ecuaciones diferenciales ordinarias (EDO) aproximando la solución paso a paso, usando la derivada en un punto para estimar el siguiente.
+            </p>
+            <div class="method-images">
+                <div class="method-image-container">
+                    <img src="run1.jpg" alt="Runge-Kutta" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="run2.jpg" alt="Runge-Kutta" />
+                    <div class="image-caption"></div>
+                </div>
+                <div class="method-image-container">
+                    <img src="run4.jpg" alt="Runge-Kutta" />
+                    <div class="image-caption"></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2024 Métodos Numéricos - Página educativa 
-    </footer>
+        &copy; 2024 Métodos Numéricos - Página educativa
+    </footer>+
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -708,7 +937,7 @@ h2 {
                 // Mostrar contenido correspondiente
                 const targetId = button.id.replace('-tab', '');
                 partialContents.forEach(content => {
-                    if(content.id === targetId) {
+                    if (content.id === targetId) {
                         content.classList.add('active');
                     } else {
                         content.classList.remove('active');
@@ -718,4 +947,5 @@ h2 {
         });
     </script>
 </body>
+
 </html>
